@@ -12,3 +12,8 @@ if sum == n:
     print("Armstrong Number")
 else:
     print("Not an Armstrong Number")
+
+
+Output:
+153
+Armstrong Number
