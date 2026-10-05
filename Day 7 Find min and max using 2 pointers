@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[100], n, i;
+    int *p;
+    int max, min;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter array elements: ");
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    p = a;
+
+    max = *p;
+    min = *p;
+
+    for(i = 1; i < n; i++)
+    {
+        p++;
+
+        if(*p > max)
+        {
+            max = *p;
+        }
+
+        if(*p < min)
+        {
+            min = *p;
+        }
+    }
+
+    printf("Maximum = %d\n", max);
+    printf("Minimum = %d\n", min);
+
+    return 0;
+}
+
+
+
+Output 
+
+Enter number of elements: 5
+Enter array elements: 25 10 45 5 30
+Maximum = 45
+Minimum = 5
